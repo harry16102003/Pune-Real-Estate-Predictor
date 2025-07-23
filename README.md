@@ -18,18 +18,6 @@ This project is an end-to-end data science solution for analyzing the Pune real 
 
 ---
 
-## 🔗 Live Demos & Screenshots
-
-* **Live Streamlit App**: \[Visit App]\(<< INSERT YOUR DEPLOYED STREAMLIT APP LINK HERE >>)
-
-* **Published Power BI Dashboard**: \[View Dashboard]\(<< INSERT YOUR PUBLISHED POWER BI LINK HERE >>)
-
-### Screenshot - Streamlit App
-
-![Streamlit App Screenshot](5688e426-0354-4903-9e1f-378a738bf15f.png)
-
----
-
 ## 🛠️ Tech Stack
 
 **Languages & Libraries**: Python, Pandas, NumPy, Scikit-learn, XGBoost
