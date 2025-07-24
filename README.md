@@ -126,5 +126,4 @@ Hello! I'm **`Harsh Bandal`**, a passionate data science student with a strong i
 This project showcases my ability to handle the entire data science lifecycle, from initial data cleaning and analysis to model deployment. I am proficient in Python, SQL, and various data analysis libraries, and I enjoy turning complex data into actionable insights.
 
 * **LinkedIn:** [**`<< CLICK HERE >>`**](https://www.linkedin.com/in/harsh-bandal-3240912b7/)
-* **Email:** [**`<< CLICK HERE >>`**](harshbandal.scoe.comp@gmail.com)
 
