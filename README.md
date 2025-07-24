@@ -44,7 +44,7 @@ A well-organized folder structure is crucial for this project to function correc
 
 PuneRealEstate/
 ├── app/
-│   └── predictor_app.py         # The Streamlit web application script
+│   └── predictor_app.py         # The Streamlit web application script 
 ├── data/
 │   ├── pune_house_data.csv      # Raw, original dataset
 │   ├── dashboard_data.csv       # Cleaned data for the Power BI dashboard
