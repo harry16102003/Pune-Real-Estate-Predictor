@@ -21,10 +21,10 @@ This project is an end-to-end data science solution designed to analyze the Pune
 * **Published Power BI Dashboard:** [**`<< CLICK HERE >>`**](https://app.powerbi.com/groups/me/reports/556060b7-f0c5-4a92-8737-35fc565e8a60/187890696b263581466c?experience=power-bi)
 
 ### Home Page
-![Home Page Screenshot](https://i.imgur.com/7gqgYQk.png)
+![Home Page Screenshot](screenshots/1.png)
 
 ### Market Overview Dashboard
-![Dashboard Screenshot](https://i.imgur.com/pBwZz8X.png)
+![Dashboard Screenshot](screenshots/2.png)
 
 ---
 
