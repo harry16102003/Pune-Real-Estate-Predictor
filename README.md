@@ -1,145 +1,111 @@
-# 🏥 Healthcare Patient Readmission Analysis
 
-An end-to-end **Data Science and Business Intelligence** project focused on analyzing patient readmission data.  
-This project implements a full pipeline—from data ingestion and analysis to predictive modeling and interactive visualization—to deliver actionable insights into healthcare operations.
+# 🏠 Pune Real Estate Price Predictor & Analysis Tool
+
+This project is an end-to-end data science solution designed to analyze the Pune real estate market. It leverages data cleaning, feature engineering, and machine learning to provide two primary outputs: an interactive analytical dashboard and a live price prediction web application. This repository contains all the necessary code, data, and models to replicate the project.
 
 ---
 
 ## 🚀 Key Features
 
-- **Interactive Dashboard**: A comprehensive 4-page Power BI dashboard for exploring patient demographics, clinical factors, and model performance.  
-- **Live Prediction App**: A user-friendly web application built with Streamlit that uses a trained XGBoost model to predict patient readmission risk in real-time.  
-- **Data-Driven Analysis**: Based on a detailed analysis of a real-world healthcare dataset in a Jupyter Notebook.  
-- **End-to-End Workflow**: Demonstrates the full data science lifecycle from ingestion to deployment.
+- **Interactive Dashboard**: A comprehensive 4-page Power BI dashboard for exploring historical market trends, price distributions, and detailed property feature analysis.
+- **Live Prediction App**: A user-friendly web application built with Streamlit that uses a trained XGBoost model to predict property prices in real-time based on user inputs.
+- **Data-Driven Analysis**: Based on a real-world housing dataset and in-depth analysis performed in Jupyter Notebook.
+- **End-to-End Workflow**: Demonstrates a full data science lifecycle, from ingestion to deployment.
 
 ---
 
 ## 🔗 Live Demos & Screenshots
 
-- 🔗 **Live Streamlit App**: [Click to open](https://healthcare-readmission-analysis-rmuajo4ghd9n8weauxki7q.streamlit.app/)  
-- 🖼️ **Web App UI Preview**:  
-  ![Web App](./1.png)
+- **Live Streamlit App**: [Click here to try the app](https://your-streamlit-link.com)
+- **Published Power BI Dashboard**: [Click here to explore the dashboard](https://your-powerbi-link.com)
 
-- 🖼️ **Dashboard - Overview**  
-  ![Overview](./2.jpg)
-
-- 🖼️ **Dashboard - Readmission Drivers**  
-  ![Drivers](./3.jpg)
-
-- 🖼️ **Dashboard - Demographics**  
-  ![Demographics](./4.jpg)
-
-- 🖼️ **Dashboard - Model Insights**  
-  ![Model](./5.jpg)
+| Web App                           | Market Overview Dashboard         |
+|----------------------------------|-----------------------------------|
+| ![App Screenshot](screenshots/1.png) | ![Dashboard Screenshot](screenshots/2.png) |
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Area             | Tools & Libraries                                                   |
-|------------------|---------------------------------------------------------------------|
-| **Database**      | SQL Server Management Studio (SSMS)                                 |
-| **Data Analysis** | Python (Pandas, NumPy, Seaborn, Matplotlib)                         |
-| **Modeling**      | Scikit-learn, XGBoost, Hyperparameter Tuning                        |
-| **Visualization** | Power BI                                                            |
-| **Web App**       | Streamlit                                                           |
-| **Version Control**| Git & GitHub                                                       |
+| Area                | Tools & Libraries                                          |
+|---------------------|------------------------------------------------------------|
+| **Programming**     | Python 3.10+                                               |
+| **Data Analysis**   | Pandas, NumPy, Jupyter                                     |
+| **Modeling**        | Scikit-learn, XGBoost                                      |
+| **Visualization**   | Power BI, Matplotlib, Seaborn                              |
+| **Web App**         | Streamlit                                                  |
 
 ---
 
 ## 📂 Project Structure
 
-```
-Healthcare-Readmission-Analysis/
-├── app/               # Streamlit web app & model file
-│   └── app.py
-│   └── readmission_model_xgboost.pkl
-├── dashboard/         # Power BI report file
-│   └── readmission_dashboard.pbix
-├── dataset/           # Raw and processed CSV datasets
-├── model/             # Final trained model
-│   └── readmission_model_xgboost.pkl
-├── notebook/          # Jupyter Notebook (EDA, modeling)
-│   └── analysis_and_modeling.ipynb
-├── sql_query/         # SQL scripts for DB setup
-│   └── create_tables.sql
-├── requirements.txt   # Python dependencies
-└── README.md
+```bash
+PuneRealEstate/
+├── app/
+│   └── predictor_app.py                # The Streamlit web application
+├── data/
+│   ├── pune_house_data.csv            # Original raw dataset
+│   ├── dashboard_data.csv             # Cleaned data for Power BI
+│   └── feature_importance.csv         # Feature importance values
+├── models/
+│   ├── pune_house_price_model.pkl     # Trained XGBoost model
+│   └── model_columns.json             # List of feature columns
+├── notebooks/
+│   └── pune_real_estate_analysis.ipynb # All EDA and modeling work
+├── Power BI/
+│   └── Pune_Real_Estate_Dashboard.pbix # Power BI dashboard file
+├── screenshots/
+│   ├── 1.png                          # Screenshot of Home Page
+│   └── 2.png                          # Screenshot of Dashboard
+└── requirements.txt                   # Python dependency list
 ```
 
 ---
 
 ## ⚙️ Setup and Installation
 
-### 🔧 Clone the Repository
-
 ```bash
-git clone https://github.com/your-username/Healthcare-Readmission-Analysis.git
-cd Healthcare-Readmission-Analysis
-```
+# 1. Clone the repository
+git clone https://github.com/your-username/Pune-Real-Estate-Predictor.git
+cd Pune-Real-Estate-Predictor
 
-### 🧪 Create a Virtual Environment
-
-```bash
+# 2. Create and activate a virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-```
+source venv/bin/activate        # Windows: venv\Scripts\activate
 
-### 📦 Install the Requirements
-
-**requirements.txt**:
-
-```
-streamlit
-joblib
-numpy
-pandas
-scikit-learn
-xgboost
-```
-
-**Install using pip**:
-
-```bash
+# 3. Install required libraries
 pip install -r requirements.txt
-```
 
-### ▶️ Run the Streamlit App
-
-```bash
+# 4. Run the Streamlit App
 cd app
-streamlit run app.py
+streamlit run predictor_app.py
 ```
 
 ---
 
 ## 🔬 Methodology
 
-1. **Data Ingestion & Cleaning**: Loaded and preprocessed CSV data in Jupyter Notebook.
-2. **Feature Engineering**: Created new variables like `is_readmitted`, `age_diagnoses_interaction`.
-3. **Model Training**: Used XGBoost Classifier with hyperparameter tuning.
-4. **Deployment**: Model saved with `joblib` and integrated in Streamlit app.
+- **Data Cleaning**: Handled missing values and standardized inconsistent fields (like total_sqft ranges).
+- **Feature Engineering**: Created `bhk` and `price_per_sqft` for better predictive modeling.
+- **Outlier Removal**: Used location-wise standard deviation to eliminate anomalies.
+- **Model Training**: Trained an XGBoost Regressor with an R² score of 0.73.
+- **Deployment Ready**: Saved artifacts for production (joblib + JSON).
 
 ---
 
 ## 👨‍💻 About Me
 
-Hi! I'm **Harsh Bandal**, a passionate data science student with a strong interest in machine learning, data visualization, and building end-to-end data products.
+Hi! I'm **Harsh Bandal**, a passionate data science student with a deep interest in ML, BI tools, and building impactful data solutions.
 
-📌 _“Turning data into decisions, and models into impact.”_
+- 💼 Proficient in Python, SQL, Scikit-learn, and Streamlit.
+- 🔎 Focused on converting messy data into valuable insights.
+- 📊 Obsessed with dashboards and meaningful visualizations.
 
-- **GitHub**: [harry16102003](https://github.com/harry16102003)  
-- **LinkedIn**: [Harsh Bandal](https://www.linkedin.com/in/harsh-bandal-3240912b7/)  
-- **Email**: harshbandal.scoe.comp@gmail.com  
-
----
-
-## ⭐ Project Goal
-
-To demonstrate a complete **end-to-end data science workflow** using industry-standard tools and technologies, while addressing a real-world problem in the healthcare domain.
+📫 **Connect with me**:  
+[LinkedIn](https://www.linkedin.com/in/harsh-bandal-3240912b7/) | [GitHub](https://github.com/harry16102003) | harshbandal.scoe.comp@gmail.com
 
 ---
 
 ## 📜 License
 
-This project is licensed under the **MIT License** - see the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
