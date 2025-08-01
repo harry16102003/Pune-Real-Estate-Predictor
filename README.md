@@ -1,129 +1,145 @@
-# Pune Real Estate Price Predictor & Analysis Tool
+# 🏥 Healthcare Patient Readmission Analysis
 
-## Overview
-
-This project is an end-to-end data science solution designed to analyze the Pune real estate market. It leverages data cleaning, feature engineering, and machine learning to provide two primary outputs: an interactive analytical dashboard and a live price prediction web application. This repository contains all the necessary code, data, and models to replicate the project.
+An end-to-end **Data Science and Business Intelligence** project focused on analyzing patient readmission data.  
+This project implements a full pipeline—from data ingestion and analysis to predictive modeling and interactive visualization—to deliver actionable insights into healthcare operations.
 
 ---
 
 ## 🚀 Key Features
 
-* **Interactive Dashboard:** A comprehensive 4-page Power BI dashboard for exploring historical market trends, price distributions, and detailed property feature analysis.
-* **Live Prediction App:** A user-friendly web application built with Streamlit that uses a trained XGBoost model to predict property prices in real-time based on user inputs.
-* **Data-Driven Analysis:** The entire project is based on a detailed analysis of a real-world housing dataset, performed in a Jupyter Notebook.
-* **End-to-End Workflow:** Demonstrates the complete data science lifecycle, from data ingestion and cleaning to model deployment in a web app.
+- **Interactive Dashboard**: A comprehensive 4-page Power BI dashboard for exploring patient demographics, clinical factors, and model performance.  
+- **Live Prediction App**: A user-friendly web application built with Streamlit that uses a trained XGBoost model to predict patient readmission risk in real-time.  
+- **Data-Driven Analysis**: Based on a detailed analysis of a real-world healthcare dataset in a Jupyter Notebook.  
+- **End-to-End Workflow**: Demonstrates the full data science lifecycle from ingestion to deployment.
 
 ---
 
 ## 🔗 Live Demos & Screenshots
 
-* **Live Streamlit App:** [**`<< CLICK HERE  >>`**](https://pune-real-estate-predictor-jh67jg6n2k44xtcrkrqc8z.streamlit.app/)
-* **Published Power BI Dashboard:** [**`<< CLICK HERE >>`**](https://app.powerbi.com/groups/me/reports/556060b7-f0c5-4a92-8737-35fc565e8a60/187890696b263581466c?experience=power-bi)
+- 🔗 **Live Streamlit App**: [Click to open](https://healthcare-readmission-analysis-rmuajo4ghd9n8weauxki7q.streamlit.app/)  
+- 🖼️ **Web App UI Preview**:  
+  ![Web App](./1.png)
 
-### Home Page
-![Home Page Screenshot](screenshots/1.png)
+- 🖼️ **Dashboard - Overview**  
+  ![Overview](./2.jpg)
 
-### Market Overview Dashboard
-![Dashboard Screenshot](screenshots/2.png)
+- 🖼️ **Dashboard - Readmission Drivers**  
+  ![Drivers](./3.jpg)
+
+- 🖼️ **Dashboard - Demographics**  
+  ![Demographics](./4.jpg)
+
+- 🖼️ **Dashboard - Model Insights**  
+  ![Model](./5.jpg)
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Programming Language:** Python 3.10+
-* **Data Analysis & ML:** Pandas, NumPy, Scikit-learn, XGBoost, Jupyter
-* **BI & Visualization:** Power BI, Matplotlib, Seaborn
-* **Web App Framework:** Streamlit
+| Area             | Tools & Libraries                                                   |
+|------------------|---------------------------------------------------------------------|
+| **Database**      | SQL Server Management Studio (SSMS)                                 |
+| **Data Analysis** | Python (Pandas, NumPy, Seaborn, Matplotlib)                         |
+| **Modeling**      | Scikit-learn, XGBoost, Hyperparameter Tuning                        |
+| **Visualization** | Power BI                                                            |
+| **Web App**       | Streamlit                                                           |
+| **Version Control**| Git & GitHub                                                       |
 
 ---
 
 ## 📂 Project Structure
 
-A well-organized folder structure is crucial for this project to function correctly, especially for the Streamlit app's relative file paths.
-
-
-PuneRealEstate/
-├── app/
-│   └── predictor_app.py         # The Streamlit web application script 
-├── data/
-│   ├── pune_house_data.csv      # Raw, original dataset
-│   ├── dashboard_data.csv       # Cleaned data for the Power BI dashboard
-│   └── feature_importance.csv   # Data for the feature importance chart
-├── models/
-│   ├── pune_house_price_model.pkl # Saved, trained XGBoost model
-│   └── model_columns.json       # List of feature columns for the model
-├── notebooks/
-│   └── pune_real_estate_analysis.ipynb # Jupyter Notebook with all analysis
-├── Power BI/
-│   └── Pune_Real_Estate_Dashboard.pbix # Power BI project file
-├── screenshots/
-│   ├── 1.png                    # Screenshot of the Home Page
-│   └── 2.png                    # Screenshot of the Dashboard
-└── requirements.txt             # Required Python libraries for deployment
-
+```
+Healthcare-Readmission-Analysis/
+├── app/               # Streamlit web app & model file
+│   └── app.py
+│   └── readmission_model_xgboost.pkl
+├── dashboard/         # Power BI report file
+│   └── readmission_dashboard.pbix
+├── dataset/           # Raw and processed CSV datasets
+├── model/             # Final trained model
+│   └── readmission_model_xgboost.pkl
+├── notebook/          # Jupyter Notebook (EDA, modeling)
+│   └── analysis_and_modeling.ipynb
+├── sql_query/         # SQL scripts for DB setup
+│   └── create_tables.sql
+├── requirements.txt   # Python dependencies
+└── README.md
+```
 
 ---
 
 ## ⚙️ Setup and Installation
 
-To run this project locally, please follow these steps:
+### 🔧 Clone the Repository
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/your-username/Pune-Real-Estate-Predictor.git](https://github.com/your-username/Pune-Real-Estate-Predictor.git)
-    cd Pune-Real-Estate-Predictor
-    ```
+```bash
+git clone https://github.com/your-username/Healthcare-Readmission-Analysis.git
+cd Healthcare-Readmission-Analysis
+```
 
-2.  **Create a virtual environment (recommended):**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-    ```
+### 🧪 Create a Virtual Environment
 
-3.  **Install the required libraries:**
-    Create a `requirements.txt` file in the root of your project folder with the following content, and then run the installation command.
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+```
 
-    **`requirements.txt`:**
-    ```text
-    streamlit
-    joblib
-    numpy
-    pandas
-    scikit-learn
-    xgboost
-    ```
+### 📦 Install the Requirements
 
-    **Installation command:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+**requirements.txt**:
 
-4.  **Run the Streamlit App:**
-    Navigate to the `app` directory and run the following command in your terminal:
-    ```bash
-    streamlit run predictor_app.py
-    ```
-    The application will open in your web browser.
+```
+streamlit
+joblib
+numpy
+pandas
+scikit-learn
+xgboost
+```
+
+**Install using pip**:
+
+```bash
+pip install -r requirements.txt
+```
+
+### ▶️ Run the Streamlit App
+
+```bash
+cd app
+streamlit run app.py
+```
 
 ---
 
 ## 🔬 Methodology
 
-The project follows a structured data science workflow:
-
-1.  **Data Ingestion & Cleaning:** The raw `pune_house_data.csv` was loaded into a Jupyter Notebook. Missing values were handled, and columns with inconsistent data types (like `total_sqft` containing ranges) were cleaned and standardized.
-2.  **Feature Engineering:** A new `bhk` column was extracted from the `size` column, and a `price_per_sqft` feature was created to aid in outlier detection.
-3.  **Outlier Removal:** Statistical methods (mean and one standard deviation) were applied on a per-location basis to remove extreme outliers that could negatively impact the model's performance.
-4.  **Model Training:** The cleaned data was used to train an **XGBoost Regressor** model. The model was evaluated and achieved an R-squared score of **0.73**, indicating it can explain 73% of the price variance.
-5.  **Saving Artifacts:** The trained model, along with the list of feature columns, was saved using `joblib` and `json` for use in the Streamlit application.
+1. **Data Ingestion & Cleaning**: Loaded and preprocessed CSV data in Jupyter Notebook.
+2. **Feature Engineering**: Created new variables like `is_readmitted`, `age_diagnoses_interaction`.
+3. **Model Training**: Used XGBoost Classifier with hyperparameter tuning.
+4. **Deployment**: Model saved with `joblib` and integrated in Streamlit app.
 
 ---
 
 ## 👨‍💻 About Me
 
-Hello! I'm **`Harsh Bandal`**, a passionate data science student with a strong interest in machine learning, data visualization, and building end-to-end data products.
+Hi! I'm **Harsh Bandal**, a passionate data science student with a strong interest in machine learning, data visualization, and building end-to-end data products.
 
-This project showcases my ability to handle the entire data science lifecycle, from initial data cleaning and analysis to model deployment. I am proficient in Python, SQL, and various data analysis libraries, and I enjoy turning complex data into actionable insights.
+📌 _“Turning data into decisions, and models into impact.”_
 
-* **LinkedIn:** [**`<< CLICK HERE >>`**](https://www.linkedin.com/in/harsh-bandal-3240912b7/)
+- **GitHub**: [harry16102003](https://github.com/harry16102003)  
+- **LinkedIn**: [Harsh Bandal](https://www.linkedin.com/in/harsh-bandal-3240912b7/)  
+- **Email**: harshbandal.scoe.comp@gmail.com  
 
+---
+
+## ⭐ Project Goal
+
+To demonstrate a complete **end-to-end data science workflow** using industry-standard tools and technologies, while addressing a real-world problem in the healthcare domain.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** - see the LICENSE file for details.
